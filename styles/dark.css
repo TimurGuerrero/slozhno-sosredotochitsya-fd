@@ -5,9 +5,13 @@
 */
 
 :root.theme-dark {
-  --background-color: black;
+  --color-title: #db00ff;
+  --color-paragraph: #f1b2ce;
+  --accent-color: #ff0070;
+  --background-color: #000028;
   --text-color: #f1b2ce;
   --text-accent-color: #000028;
+  --background-image: url(../images/cover-image-dark.png);
 
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -15,6 +19,25 @@
   */
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-title: #db00ff;
+    --color-paragraph: #f1b2ce;
+    --accent-color: #ff0070;
+    --background-color: #000028;
+    --text-color: #f1b2ce;
+    --text-accent-color: #000028;
+    --background-image: url(../images/cover-image-dark.png);
+  }
+}
+
 .theme-dark .page {
+  --color-title: #db00ff;
+  --color-paragraph: #f1b2ce;
+  --accent-color: #ff0070;
+  --background-color: #000028;
+  --text-color: #f1b2ce;
+  --text-accent-color: #000028;
+  --background-image: url(../images/cover-image-dark.png);
   /* Вам также нужно будет написать ряд подобных селекторов */
 }

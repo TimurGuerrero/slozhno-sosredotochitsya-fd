@@ -53,6 +53,13 @@
   color: var(--accent-color);
 }
 
+.theme-light .header__theme-menu::before {
+  content: none;
+}
+.theme-light .header__theme-menu::after {
+  content: none;
+}
+
 .header__theme-menu-list {
   display: grid;
   gap: 10px;
@@ -64,15 +71,31 @@
 
 .header__theme-menu-button {
   text-transform: lowercase;
-  padding: 1.5px 13px 1.5px 13px;
+  padding: 0px 13px 3px 13px;
   font-weight: var(--font-weight-normal);
   color: var(--accent-color);
   background-color: inherit;
   border: none;
 }
 
-.header__theme-menu-item:hover {
-  border: 1px solid initial;
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px solid var(--accent-color);
 }
 
 .header__title {
@@ -89,8 +112,19 @@
 }
 
 p .decorate-element {
-    text-shadow: 2px 2px 0px var(--accent-color);
-    text-decoration: none;
+  text-shadow: 2px 2px 0px var(--accent-color);
+  text-decoration: none;
+}
+
+p .decorate-element:hover {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-paragraph);
+}
+
+p .decorate-element:focus {
+  outline: none;
+  border: 1px solid var(--color-paragraph);
 }
 
 .decorated-zone::before {
@@ -120,7 +154,7 @@ p .decorate-element {
   align-content: center;
 }
 .title-decor {
-  color: var(--background-color);
+  color: var(--text-accent-color);
   background-color: var(--accent-color);
   font-weight: var(--font-weight-bold);
   line-height: 23.4px;
@@ -143,17 +177,21 @@ p .decorate-element {
   gap: 20px;
 }
 
+.content__section-image {
+  gap: 10px;
+}
+
 .content__title {
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
 }
 
 .content__question {
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
   font-weight: var(--font-weight-bold);
-  color: var(--accent-color);
+  color: var(--text-accent-color);
 }
 
 .content__answer {
@@ -178,6 +216,14 @@ p .decorate-element {
   margin-top: 20px;
 }
 
+.content__list-item:first-child {
+  margin-top: 10px;
+}
+
+.content__list .title-decor {
+  font-weight: var(--font-weight-normal);
+}
+
 /*____________IMEGS_________________*/
 
 .content__section-image {
@@ -189,6 +235,11 @@ p .decorate-element {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.gallery__item {
+  display: grid;
+  margin: 0;
 }
 
 .footer {
@@ -208,6 +259,10 @@ p .decorate-element {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   color: var(--color-title);
+}
+
+.footer .decorate-element {
+  text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 @media (width >= 768px) {
@@ -280,6 +335,10 @@ p .decorate-element {
     grid-column: 1 / 4;
   }
 
+  .content__section-image {
+    gap: 20px;
+  }
+
   .gallery__item {
     display: grid;
     margin: 0;
@@ -311,30 +370,27 @@ p .decorate-element {
   .gallery__item:nth-child(6) {
     grid-column: 2 / 4;
   }
-.footer__title{
-   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
-}
-
-
 
 @media (width >= 1024px) {
- .header__theme-menu {
+  .header__theme-menu {
     grid-column: span 3;
     justify-self: center;
     align-self: self-start;
-    
   }
 
   .header__theme-menu-list {
-  display: flex;
+    display: flex;
   }
 
   .content__section {
     grid-template-columns: repeat(3, 1fr);
   }
 
-   .content__answer {
+  .content__answer {
     grid-column: 2 / 4;
   }
 
@@ -342,18 +398,14 @@ p .decorate-element {
     grid-column: auto;
   }
 
-   .content__text-grid-responsive:nth-child(1) {
+  .content__text-grid-responsive:nth-child(1) {
     grid-column: 1;
   }
 
-  .grid-text-in-columns .content__question{
+  .grid-text-in-columns .content__question {
     grid-row: 1;
   }
-  .grid-text-in-columns .content__answer{
+  .grid-text-in-columns .content__answer {
     grid-row: 2;
   }
-.content__list-item:first-child {
-  margin-top: 10px;
-}
-
 }
