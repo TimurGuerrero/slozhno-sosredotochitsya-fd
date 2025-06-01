@@ -4,18 +4,6 @@
   переключая тему
 */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-title: #ffc2e6;
-    --color-paragraph: #353430;
-    --accent-color: #ff8dcb;
-    --background-color: #ffc2e6;
-    --text-color: #353430;
-    --text-accent-color: #353430;
-    --background-image: url(../images/cover-image-light.png);
-  }
-}
-
 :root.theme-light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -30,6 +18,18 @@
   --background-image: url(../images/cover-image-light.png);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-title: #ffc2e6;
+    --color-paragraph: #353430;
+    --accent-color: #ff8dcb;
+    --background-color: #ffc2e6;
+    --text-color: #353430;
+    --text-accent-color: #353430;
+    --background-image: url(../images/cover-image-light.png);
+  }
+}
+
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
   --color-title: #ffc2e6;
@@ -40,7 +40,6 @@
   --text-accent-color: #353430;
   --background-image: url(../images/cover-image-light.png);
 }
-
 
 .theme-light .header__theme-menu-button {
   color: var(--text-accent-color);

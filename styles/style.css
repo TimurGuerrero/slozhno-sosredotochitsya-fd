@@ -23,6 +23,7 @@
   padding-inline: 10px;
   block-size: 100vh;
   position: relative;
+  min-height: 668px;
 }
 
 .header__theme-menu {
@@ -243,6 +244,7 @@ p .decorate-element:focus {
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 668px;
 }
 
 .footer__title {
