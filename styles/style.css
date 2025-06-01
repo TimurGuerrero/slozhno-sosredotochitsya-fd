@@ -160,8 +160,6 @@ p .decorate-element:focus {
   line-height: 23.4px;
 }
 
-/*_________________________________________________________*/
-
 .content {
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
@@ -175,10 +173,6 @@ p .decorate-element:focus {
 .content__section {
   display: grid;
   gap: 20px;
-}
-
-.content__section-image {
-  gap: 10px;
 }
 
 .content__title {
@@ -223,8 +217,6 @@ p .decorate-element:focus {
 .content__list .title-decor {
   font-weight: var(--font-weight-normal);
 }
-
-/*____________IMEGS_________________*/
 
 .content__section-image {
   display: grid;
