@@ -1,7 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   justify-self: auto;
   align-self: auto;
   font-family: var(--main-font-family);
@@ -146,6 +143,7 @@ p .decorate-element:focus {
   grid-row: 3;
   align-content: center;
 }
+
 .title-decor {
   color: var(--text-accent-color);
   background-color: var(--accent-color);
@@ -189,8 +187,8 @@ p .decorate-element:focus {
 
 .content__question__list {
   display: grid;
-    gap: 20px;
-  }
+  gap: 20px;
+}
 
 .content__paragraph {
   color: var(--color-paragraph);
@@ -320,12 +318,10 @@ p .decorate-element:focus {
     grid-column: 1;
   }
 
-
   .content__question__list {
     grid-column: span 3;
     grid-row: 2;
   }
-
 
   .content__answer {
     grid-column: 2;
