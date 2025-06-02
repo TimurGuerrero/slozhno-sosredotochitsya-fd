@@ -1,7 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   justify-self: auto;
   align-self: auto;
   font-family: var(--main-font-family);
@@ -54,13 +51,6 @@
   color: var(--accent-color);
 }
 
-.theme-light .header__theme-menu::before {
-  content: none;
-}
-.theme-light .header__theme-menu::after {
-  content: none;
-}
-
 .header__theme-menu-list {
   display: grid;
   gap: 10px;
@@ -80,7 +70,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color-transparent);
   cursor: pointer;
 }
 
@@ -90,7 +80,6 @@
 }
 
 .header__theme-menu-button:disabled {
-  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -154,6 +143,7 @@ p .decorate-element:focus {
   grid-row: 3;
   align-content: center;
 }
+
 .title-decor {
   color: var(--text-accent-color);
   background-color: var(--accent-color);
@@ -195,6 +185,11 @@ p .decorate-element:focus {
   gap: 10px;
 }
 
+.content__question__list {
+  display: grid;
+  gap: 20px;
+}
+
 .content__paragraph {
   color: var(--color-paragraph);
 }
@@ -212,7 +207,7 @@ p .decorate-element:focus {
 }
 
 .content__list-item:first-child {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .content__list .title-decor {
@@ -308,6 +303,7 @@ p .decorate-element:focus {
 
   .content__section {
     grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
   }
 
   .content__section:last-child {
@@ -321,6 +317,12 @@ p .decorate-element:focus {
   .content__question {
     grid-column: 1;
   }
+
+  .content__question__list {
+    grid-column: span 3;
+    grid-row: 2;
+  }
+
   .content__answer {
     grid-column: 2;
   }
@@ -352,6 +354,7 @@ p .decorate-element:focus {
     grid-column: 3;
     grid-row: 2 / 4;
   }
+
   .gallery__item:nth-child(4) {
     grid-row: 3 / 5;
   }
@@ -364,6 +367,7 @@ p .decorate-element:focus {
   .gallery__item:nth-child(6) {
     grid-column: 2 / 4;
   }
+  
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -388,6 +392,12 @@ p .decorate-element:focus {
     grid-column: 2 / 4;
   }
 
+  .content__question__list {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .content__text-grid-responsive {
     grid-column: auto;
   }
@@ -398,8 +408,5 @@ p .decorate-element:focus {
 
   .grid-text-in-columns .content__question {
     grid-row: 1;
-  }
-  .grid-text-in-columns .content__answer {
-    grid-row: 2;
   }
 }
