@@ -54,12 +54,7 @@
   color: var(--accent-color);
 }
 
-.theme-light .header__theme-menu::before {
-  content: none;
-}
-.theme-light .header__theme-menu::after {
-  content: none;
-}
+
 
 .header__theme-menu-list {
   display: grid;
