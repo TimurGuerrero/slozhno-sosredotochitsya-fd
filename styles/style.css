@@ -354,6 +354,7 @@ p .decorate-element:focus {
     grid-column: 3;
     grid-row: 2 / 4;
   }
+
   .gallery__item:nth-child(4) {
     grid-row: 3 / 5;
   }
@@ -366,6 +367,7 @@ p .decorate-element:focus {
   .gallery__item:nth-child(6) {
     grid-column: 2 / 4;
   }
+  
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
