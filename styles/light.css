@@ -55,6 +55,9 @@
     .header__theme-menu-button_active {
       outline: 1px solid var(--text-accent-color);
     }
+    .content__question {
+    color: var(--text-accent-color);
+    }
   }
 }
 
@@ -101,4 +104,8 @@
 
 .theme-light .header__theme-menu::after {
   content: none;
+}
+
+.theme-light .content__question {
+  color: var(--text-accent-color);
 }
